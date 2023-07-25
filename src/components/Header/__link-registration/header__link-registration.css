@@ -1,0 +1,20 @@
+.header__link-registration {
+    text-align: right;
+    font-family: Inter, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+@media screen and (max-width: 425px) {
+    .header__link-registration {
+        font-size: 10px;
+    }
+}
+
+

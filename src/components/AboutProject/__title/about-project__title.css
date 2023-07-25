@@ -1,0 +1,29 @@
+.about-project__title {
+    color: white;
+    margin: 0;
+    font-family: Inter, serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.88px;
+}
+
+.about-project__title::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #DADADA;
+    padding-top: 23px;
+}
+
+
+@media screen and (max-width: 425px) {
+    .about-project__title {
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }
+
+    .about-project__title::after {
+        padding-top: 28px;
+    }
+}
