@@ -26,6 +26,7 @@ replay_pid*
 
 # dependencies
 /node_modules
+/.idea
 /.pnp
 .pnp.js
 
