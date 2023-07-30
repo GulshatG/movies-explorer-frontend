@@ -1,17 +1,27 @@
 import React from 'react';
 import Header from '../Header/Header';
-import AboutProject from '../AboutProject/AboutProject';
-import NavTab from '../NavTab/NavTab';
-import Promo from '../Promo/Promo';
+import Footer from '../Footer/Footer';
+import Main from '../Main/Main';
+import { CurrentUserContext } from '../../context/CurrentUserContext';
 
 function App() {
+
+  let testUser = {
+    'name': 'Виталий',
+    'email': 'pochta@yandex.ru',
+  };
+  const [loggedIn, setLoggedIn] = React.useState(false);
+  const [currentUser, setCurrentUser] = React.useState({});
+  React.useEffect(() => setCurrentUser(testUser), [currentUser]);
+
   return (
-    <>
-      <Header/>
-      <Promo/>
-      <NavTab/>
-      <AboutProject/>
-    </>
+    <CurrentUserContext.Provider value={currentUser}>
+      <>
+        <Header/>
+        <Main/>
+        <Footer/>
+      </>
+    </CurrentUserContext.Provider>
   );
 }
 

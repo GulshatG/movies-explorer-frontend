@@ -1,7 +1,7 @@
 function AboutProject() {
   return (
     <div className="about-project">
-      <p className="about-project__title">О проекте</p>
+      <p className="title">О проекте</p>
       <div className="about-project__description-block">
         <div>
           <p className="about-project__description-title">Дипломный проект включал 5 этапов</p>

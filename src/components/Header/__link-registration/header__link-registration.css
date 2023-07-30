@@ -1,5 +1,9 @@
 .header__link-registration {
-    text-align: right;
+    max-width: 77px;
+    max-height: 26px;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
     font-family: Inter, serif;
     font-size: 12px;
     font-style: normal;
@@ -13,6 +17,7 @@
 }
 @media screen and (max-width: 425px) {
     .header__link-registration {
+        max-width: 64px;
         font-size: 10px;
     }
 }

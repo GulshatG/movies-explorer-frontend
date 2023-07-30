@@ -1,4 +1,4 @@
-.about-project__title {
+.title {
     color: white;
     margin: 0;
     font-family: Inter, serif;
@@ -9,7 +9,7 @@
     letter-spacing: -0.88px;
 }
 
-.about-project__title::after {
+.title::after {
     content: "";
     display: block;
     border-bottom: 1px solid #DADADA;
@@ -18,12 +18,12 @@
 
 
 @media screen and (max-width: 425px) {
-    .about-project__title {
+    .title {
         font-size: 18px;
         letter-spacing: -0.72px;
     }
 
-    .about-project__title::after {
+    .title::after {
         padding-top: 28px;
     }
 }
