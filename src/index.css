@@ -1,7 +1,9 @@
 @import url("./vendor/normalize.css");
 @import url("./vendor/fonts/Inter/inter.css");
 @import url("./components/App/app.css");
+@import url("./components/App/__fix-height/app__fix-height.css");
 @import url("./components/Header/header.css");
+@import url("./components/Header/__hide/header__hide.css");
 @import url("./components/Header/__link-icon/header__link-icon.css");
 @import url("./components/Header/header_black.css");
 @import url("./components/Header/__links-group/header__links-group.css");
@@ -58,6 +60,7 @@
 @import url("./components/Portfolio/__link-group/portfolio__link-group.css");
 @import url("./components/Portfolio/__link-title/portfolio__link-title.css");
 @import url("./components/Footer/footer.css");
+@import url("./components/Footer/__hide/footer__hide.css");
 @import url("./components/Footer/__links/footer__links.css");
 @import url("./components/Footer/__link/footer__link.css");
 @import url("./components/Footer/__description/footer__description.css");
@@ -117,4 +120,5 @@
 @import url("./components/NotFoundPage/__code/not-found-page__code.css");
 @import url("./components/NotFoundPage/__description/not-found-page__description.css");
 @import url("./components/NotFoundPage/__link/not-found-page__link.css");
+@import url("./components/AnimateOpacity/animate-opacity.css");
 

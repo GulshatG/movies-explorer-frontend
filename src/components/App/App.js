@@ -40,9 +40,10 @@ function App() {
     setIsSetHigh(!isSetHigh);
   }
 
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
-      <div className={`${isSetHigh && 'app'}`}>
+      <div className={`app ${isSetHigh && 'app__fix-height'}`}>
         <BurgerPopup
           isOpen={isBurgerPopup}
           onClose={handleHamburgerButtonClicked}
@@ -67,6 +68,8 @@ function App() {
             element={
               <Movies
                 movies={movies}
+                isOpenPopup={isBurgerPopup}
+                closePopup={handleHamburgerButtonClicked}
               />
             }
           />
@@ -75,6 +78,8 @@ function App() {
             element={
               <Movies
                 movies={savedMovies}
+                isOpenPopup={isBurgerPopup}
+                closePopup={handleHamburgerButtonClicked}
               />
             }
           />
@@ -92,7 +97,6 @@ function App() {
           />
           <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
-
         <Footer/>
       </div>
     </CurrentUserContext.Provider>

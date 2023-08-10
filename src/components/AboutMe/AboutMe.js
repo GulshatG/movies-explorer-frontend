@@ -4,7 +4,7 @@ import Portfolio from '../Portfolio/Portfolio';
 
 function AboutMe() {
   return (
-    <section className="aboutMe">
+    <section className="aboutMe" id="aboutMe">
       <p className="title">Студент</p>
       <div className="aboutMe__content">
         <div>
@@ -16,7 +16,8 @@ function AboutMe() {
             и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2015 года
             работал в компании «СКБ Контур». После того, как прошёл курс по веб-разработке, начал
             заниматься фриланс-заказами и ушёл с постоянной работы.</p>
-          <Link to="./" className="aboutMe__github">Github</Link>
+          <Link to="https://github.com/GulshatG"
+                className="aboutMe__github animate-opacity">Github</Link>
         </div>
         <img src={avatar} alt="avatar" className="aboutMe__avatar"/>
       </div>

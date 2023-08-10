@@ -6,6 +6,7 @@
     background: #2F2F2F;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 @media screen and (max-width: 768px) {
     .load__button {

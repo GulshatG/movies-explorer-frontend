@@ -1,6 +1,9 @@
 import React from 'react';
 
-function BurgerPopup({ isOpen, onClose }) {
+function BurgerPopup({
+  isOpen,
+  onClose,
+}) {
   return (
     <div className={`burger-popup ${isOpen && 'burger-popup_open'}`}>
       <div className="burger-popup__container">

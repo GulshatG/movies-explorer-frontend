@@ -1,6 +1,6 @@
 import React from 'react';
 import AuthForm from '../AuthForm/AuthForm';
-import { deleteFooter, deleteHeader } from '../../utils/deleteElement';
+import { hideFooter, hideHeader, showFooter, showHeader } from '../../utils/deleteElement';
 
 function Register() {
   const [name, setName] = React.useState('');
@@ -23,8 +23,12 @@ function Register() {
     setPassword(e.target.value);
   }
   React.useEffect(() => {
-    deleteHeader();
-    deleteFooter();
+    hideHeader();
+    hideFooter();
+    return () => {
+      showHeader();
+      showFooter();
+    }
   }, [])
 
   return (
@@ -33,7 +37,7 @@ function Register() {
         title="Добро пожаловать!"
         buttonText="Зарегистрироваться"
         questionText="Уже зарегистрированы?"
-        link="/"
+        link="/signin"
         linkText="Войти">
         <div className="form-section__fields">
           <div className="form-section__input-group">

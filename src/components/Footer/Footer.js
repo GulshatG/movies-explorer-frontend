@@ -9,8 +9,8 @@ function Footer() {
       <div className="footer__content-group">
         <p className="footer__year">© 2020</p>
         <div className="footer__links">
-          <Link to="/" className="footer__link">Яндекс.Практикум</Link>
-          <Link to="/" className="footer__link">Github</Link>
+          <Link to="https://practicum.yandex.ru/" className="footer__link animate-opacity">Яндекс.Практикум</Link>
+          <Link to="https://github.com/GulshatG" className="footer__link animate-opacity">Github</Link>
         </div>
       </div>
     </div>

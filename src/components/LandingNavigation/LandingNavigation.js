@@ -1,11 +1,9 @@
-import { Link } from 'react-router-dom';
-
 function LandingNavigation() {
   return (
     <section className="landing-navigation">
-      <Link to="./" className="landing-navigation__link">О проекте</Link>
-      <Link to="./" className="landing-navigation__link">Технологии</Link>
-      <Link to="./" className="landing-navigation__link">Студент</Link>
+      <a href="#about-project" className="landing-navigation__link animate-opacity">О проекте</a>
+      <a href="#techs" className="landing-navigation__link animate-opacity">Технологии</a>
+      <a href="#aboutMe" className="landing-navigation__link animate-opacity">Студент</a>
     </section>
   );
 }

@@ -11,8 +11,6 @@ function AuthForm({
   link,
   linkText,
 }) {
-  const [name, setName] = React.useState('');
-  const [email, setEmail] = React.useState('');
   return (
     <div className="auth-form">
       <Link to="/">
@@ -22,10 +20,10 @@ function AuthForm({
       <form className="auth-form__form">
         {children}
         <div className="auth-form__button-group">
-          <button className="auth-form__button" type="submit">{buttonText}</button>
+          <button className="auth-form__button animate-opacity" type="submit">{buttonText}</button>
           <div className="auth-form__question-group">
             <p className="auth-form__question">{questionText}</p>
-            <Link className="auth-form__link" to={link}>{linkText}</Link>
+            <Link className="auth-form__link animate-opacity" to={link}>{linkText}</Link>
           </div>
         </div>
       </form>

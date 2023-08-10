@@ -1,13 +1,18 @@
 import React from 'react';
 import { CurrentUserContext } from '../../context/CurrentUserContext';
 import HelloTitle from '../Hello-title/Hello-title';
-import { deleteFooter } from '../../utils/deleteElement';
+import { hideFooter, showFooter } from '../../utils/deleteElement';
 
 function Profile() {
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const currentUser = React.useContext(CurrentUserContext);
-  deleteFooter();
+  React.useEffect(() => {
+    hideFooter();
+    return () =>{
+      showFooter();
+    }
+  }, [])
 
   function handleNameChange(e) {
     console.log(e.target.value);
@@ -60,9 +65,9 @@ function Profile() {
             maxLength="40"
           />
         </div>
-        <button className="profile__edite" type="submit">Редактировать</button>
+        <button className="profile__edite animate-opacity" type="submit">Редактировать</button>
       </form>
-      <button className="profile__logout" onClick={handleLogout}>Выйти из аккаунта</button>
+      <button className="profile__logout animate-opacity" onClick={handleLogout}>Выйти из аккаунта</button>
     </section>
   );
 }

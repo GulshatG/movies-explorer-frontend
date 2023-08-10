@@ -1,6 +1,6 @@
 import React from 'react';
 import AuthForm from '../AuthForm/AuthForm';
-import { deleteFooter, deleteHeader } from '../../utils/deleteElement';
+import { hideFooter, hideHeader, showFooter, showHeader } from '../../utils/deleteElement';
 
 function Login() {
   const [email, setEmail] = React.useState('');
@@ -15,10 +15,15 @@ function Login() {
     console.log(e.target.value);
     setPassword(e.target.value);
   }
+
   React.useEffect(() => {
-    deleteHeader();
-    deleteFooter();
-  }, [])
+    hideHeader();
+    hideFooter();
+    return () => {
+      showHeader();
+      showFooter();
+    };
+  }, []);
 
   return (
     <section className="form-section">
@@ -26,7 +31,7 @@ function Login() {
         title="Рады видеть!"
         buttonText="Войти"
         questionText="Ещё не зарегистрированы?"
-        link="/"
+        link="/signup"
         linkText="Регистрация">
         <div className="form-section__fields">
           <div className="form-section__input-group">

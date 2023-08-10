@@ -1,14 +1,4 @@
 .app {
 }
-@media screen and (max-width: 768px) {
-    .app {
-        height: 1024px;
-        overflow: hidden;
-    }
-}
-@media screen and (max-width: 320px) {
-    .app {
-        height: 780px;
-    }
-}
+
 
