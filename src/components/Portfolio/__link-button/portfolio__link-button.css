@@ -1,27 +1,28 @@
 .portfolio__link-button {
-    width: 29px;
-    height: 60px;
-    padding: 0;
-    background-image: url("../../../images/link-icon.svg");
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
+  width: 29px;
+  height: 60px;
+  padding: 0;
+  background-image: url("../../../images/link-icon.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }
+
 @media screen and (max-width: 768px) {
-    .portfolio__link-button {
-        width: 27px;
-        background-size: 60%;
-    }
+  .portfolio__link-button {
+    width: 27px;
+    background-size: 60%;
+  }
 }
 
 @media screen and (max-width: 425px) {
-    .portfolio__link-button {
-        width: 18px;
-        height: 28px;
-        background-size: 50%;
-    }
+  .portfolio__link-button {
+    width: 18px;
+    height: 28px;
+    background-size: 50%;
+  }
 }

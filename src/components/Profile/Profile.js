@@ -9,10 +9,10 @@ function Profile() {
   const currentUser = React.useContext(CurrentUserContext);
   React.useEffect(() => {
     hideFooter();
-    return () =>{
+    return () => {
       showFooter();
-    }
-  }, [])
+    };
+  }, []);
 
   function handleNameChange(e) {
     console.log(e.target.value);
@@ -67,7 +67,8 @@ function Profile() {
         </div>
         <button className="profile__edite animate-opacity" type="submit">Редактировать</button>
       </form>
-      <button className="profile__logout animate-opacity" onClick={handleLogout}>Выйти из аккаунта</button>
+      <button className="profile__logout animate-opacity" onClick={handleLogout}>Выйти из аккаунта
+      </button>
     </section>
   );
 }

@@ -6,21 +6,27 @@ import Techs from '../Techs/Techs';
 import AboutMe from '../AboutMe/AboutMe';
 
 function Main() {
-  React.useEffect(() =>{
-    let  header = document.querySelector('.header');
-    if(header && header.classList.contains('header_black')) header.classList.remove('header_black');
-    return () => {
-      if(header && !header.classList.contains('header_black')) header.classList.add('header_black');
+  React.useEffect(() => {
+    let header = document.querySelector('.header');
+    if (header && header.classList.contains('header_black')) {
+      header.classList.remove(
+        'header_black');
     }
-  })
+    return () => {
+      if (header && !header.classList.contains('header_black')) {
+        header.classList.add(
+          'header_black');
+      }
+    };
+  });
 
   return (
 
     <main>
-       <Promo/>
-       <LandingNavigation/>
-       <AboutProject/>
-       <Techs/>
+      <Promo/>
+      <LandingNavigation/>
+      <AboutProject/>
+      <Techs/>
       <AboutMe/>
     </main>
   );

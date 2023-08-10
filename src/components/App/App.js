@@ -40,7 +40,6 @@ function App() {
     setIsSetHigh(!isSetHigh);
   }
 
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className={`app ${isSetHigh && 'app__fix-height'}`}>

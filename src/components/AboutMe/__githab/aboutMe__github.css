@@ -1,26 +1,26 @@
 .aboutMe__github {
-    padding: 99px 0 0;
-    display: block;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    font-family: Inter, serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  padding: 99px 0 0;
+  display: block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-family: Inter, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 @media screen and (max-width: 768px) {
-    .aboutMe__github {
-        padding: 87px 0 0;
-    }
+  .aboutMe__github {
+    padding: 87px 0 0;
+  }
 }
 
 @media screen and (max-width: 425px) {
-    .aboutMe__github {
-        padding: 40px 0 0;
-    }
+  .aboutMe__github {
+    padding: 40px 0 0;
+  }
 }

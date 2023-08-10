@@ -8,7 +8,8 @@ function HeaderUnauth() {
       <Link to="/signup" className="header-unauth__link-registration animate-opacity">
         Регистрация
       </Link>
-      <button onClick={() => navigate('/signin')} className="header-unauth__button-login animate-opacity">Войти
+      <button onClick={() => navigate('/signin')}
+              className="header-unauth__button-login animate-opacity">Войти
       </button>
     </div>
   );

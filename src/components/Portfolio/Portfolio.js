@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Portfolio() {
   return (
@@ -6,10 +6,12 @@ function Portfolio() {
       <p className="portfolio__title">Портфолио</p>
       <div className="portfolio__links">
         <div className="portfolio__link-group">
-          <Link to="https://github.com/GulshatG/mesto" className="portfolio__link-title animate-opacity">
+          <Link to="https://github.com/GulshatG/mesto"
+                className="portfolio__link-title animate-opacity">
             Статичный сайт
           </Link>
-          <Link className="portfolio__link-button animate-opacity" to={'https://github.com/GulshatG/mesto'}/>
+          <Link className="portfolio__link-button animate-opacity"
+                to={'https://github.com/GulshatG/mesto'}/>
         </div>
         <div className="portfolio__link-group">
           <Link to="https://github.com/GulshatG/react-mesto-api-full-gha"
@@ -20,10 +22,12 @@ function Portfolio() {
                 className="portfolio__link-button animate-opacity"/>
         </div>
         <div className="portfolio__link-group">
-          <Link to="https://github.com/GulshatG/how-to-learn" className="portfolio__link-title animate-opacity">
+          <Link to="https://github.com/GulshatG/how-to-learn"
+                className="portfolio__link-title animate-opacity">
             Одностраничное приложение
           </Link>
-          <Link to="https://github.com/GulshatG/how-to-learn" className="portfolio__link-button animate-opacity"/>
+          <Link to="https://github.com/GulshatG/how-to-learn"
+                className="portfolio__link-button animate-opacity"/>
         </div>
       </div>
     </div>

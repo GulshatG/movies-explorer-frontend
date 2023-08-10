@@ -7,7 +7,6 @@ function Register() {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-
   function handleNameChange(e) {
     console.log(e.target.value);
     setName(e.target.value);
@@ -22,14 +21,15 @@ function Register() {
     console.log(e.target.value);
     setPassword(e.target.value);
   }
+
   React.useEffect(() => {
     hideHeader();
     hideFooter();
     return () => {
       showHeader();
       showFooter();
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <section className="form-section">

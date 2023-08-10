@@ -22,8 +22,10 @@ function HeaderAuth({
         <img src={accLogo} alt="Account logo" className="header-auth__button-img animate-opacity"/>
         <p className="header-auth__button-text">Аккаунт</p>
       </button>
-      <button className="header-auth__hamburger-button animate-opacity" onClick={onHamburgerButtonClick}>
-        <img src={iconHamburger} alt="hamburger logo" className="header-auth__hamburger-icon animate-opacity"/>
+      <button className="header-auth__hamburger-button animate-opacity"
+              onClick={onHamburgerButtonClick}>
+        <img src={iconHamburger} alt="hamburger logo"
+             className="header-auth__hamburger-icon animate-opacity"/>
       </button>
     </>
   );
