@@ -1,19 +1,22 @@
+import React from 'react';
 import Promo from '../Promo/Promo';
-import NavTab from '../NavTab/NavTab';
+import LandingNavigation from '../LandingNavigation/LandingNavigation';
 import AboutProject from '../AboutProject/AboutProject';
 import Techs from '../Techs/Techs';
 import AboutMe from '../AboutMe/AboutMe';
-import React from 'react';
 
 function Main() {
+  let  header = document.querySelector('.header');
+  if(header && header.classList.contains('header_black')) header.classList.remove('header_black');
   return (
-    <>
-      <Promo/>
-      <NavTab/>
-      <AboutProject/>
-      <Techs/>
+
+    <main>
+       <Promo/>
+       <LandingNavigation/>
+       <AboutProject/>
+       <Techs/>
       <AboutMe/>
-    </>
+    </main>
   );
 }
 
