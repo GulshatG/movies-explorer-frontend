@@ -19,7 +19,6 @@ function App() {
     'email': 'pochta@yandex.ru',
   };
   const [currentUser, setCurrentUser] = React.useState({});
-  const [loggedIn, setLoggedIn] = React.useState(false);
   const [movies, setMovies] = React.useState([{}]);
   const [savedMovies, setSavedMovies] = React.useState([{}]);
   const [isBurgerPopup, setIsBurgerPopup] = React.useState(false);
@@ -30,7 +29,6 @@ function App() {
     setCurrentUser(testUser);
     setMovies(testCard);
     setSavedMovies(testCard.slice(0, 3));
-    setLoggedIn(true);
   }, []);
 
   function handleHamburgerButtonClicked() {
