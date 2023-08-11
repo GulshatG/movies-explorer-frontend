@@ -14,10 +14,10 @@ function Movies({
   }, [isOpenPopup]);
 
   return (
-    <section className="movies">
+    <div className="movies">
       <Search/>
       <MoviesCardList movies={movies}/>
-    </section>
+    </div>
   );
 }
 

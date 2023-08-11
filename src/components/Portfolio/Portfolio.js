@@ -1,34 +1,35 @@
 import { Link } from 'react-router-dom';
+import arrowIcon from '../../images/link-icon.svg';
 
 function Portfolio() {
   return (
     <div className="portfolio">
       <p className="portfolio__title">Портфолио</p>
       <div className="portfolio__links">
-        <div className="portfolio__link-group">
-          <Link to="https://github.com/GulshatG/mesto"
-                className="portfolio__link-title animate-opacity">
+        <Link to="https://github.com/GulshatG/mesto"
+              className="portfolio__link-group animate-opacity"
+              target="_blank" rel="noopener noreferrer">
+          <p className="portfolio__link-title animate-opacity">
             Статичный сайт
-          </Link>
-          <Link className="portfolio__link-button animate-opacity"
-                to={'https://github.com/GulshatG/mesto'}/>
-        </div>
-        <div className="portfolio__link-group">
-          <Link to="https://github.com/GulshatG/react-mesto-api-full-gha"
-                className="portfolio__link-title animate-opacity">
+          </p>
+          <img src={arrowIcon} alt="arrow icon" className="portfolio__link-button"/>
+        </Link>
+        <Link to="https://github.com/GulshatG/react-mesto-api-full-gha"
+              className="portfolio__link-group animate-opacity"
+              target="_blank" rel="noopener noreferrer">
+          <p className="portfolio__link-title">
             Адаптивный сайт
-          </Link>
-          <Link to="https://github.com/GulshatG/react-mesto-api-full-gha"
-                className="portfolio__link-button animate-opacity"/>
-        </div>
-        <div className="portfolio__link-group">
-          <Link to="https://github.com/GulshatG/how-to-learn"
-                className="portfolio__link-title animate-opacity">
+          </p>
+          <img src={arrowIcon} alt="arrow icon" className="portfolio__link-button"/>
+        </Link>
+        <Link to="https://github.com/GulshatG/how-to-learn"
+              className="portfolio__link-group animate-opacity"
+              target="_blank" rel="noopener noreferrer">
+          <p className="portfolio__link-title">
             Одностраничное приложение
-          </Link>
-          <Link to="https://github.com/GulshatG/how-to-learn"
-                className="portfolio__link-button animate-opacity"/>
-        </div>
+          </p>
+          <img src={arrowIcon} alt="arrow icon" className="portfolio__link-button"/>
+        </Link>
       </div>
     </div>
   );

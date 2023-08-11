@@ -1,4 +1,4 @@
-.aboutMe__github {
+.about-me__github {
   padding: 99px 0 0;
   display: block;
   border: none;
@@ -14,13 +14,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .aboutMe__github {
+  .about-me__github {
     padding: 87px 0 0;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .aboutMe__github {
+  .about-me__github {
     padding: 40px 0 0;
   }
 }

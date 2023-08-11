@@ -1,4 +1,4 @@
-.aboutMe {
+.about-me {
   display: flex;
   flex-direction: column;
   color: white;
@@ -7,13 +7,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .aboutMe {
+  .about-me {
     padding: 90px 50px;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .aboutMe {
+  .about-me {
     padding: 70px 14px;
   }
 }

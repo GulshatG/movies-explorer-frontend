@@ -20,7 +20,7 @@ function HeaderAuth({
               className={`header-auth__account-button animate-opacity ${isShowAccountButton &&
               'header-auth__account-button_show'}`}>
         <img src={accLogo} alt="Account logo" className="header-auth__button-img animate-opacity"/>
-        <p className="header-auth__button-text">Аккаунт</p>
+        Аккаунт
       </button>
       <button className="header-auth__hamburger-button animate-opacity"
               onClick={onHamburgerButtonClick}>

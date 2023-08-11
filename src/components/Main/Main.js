@@ -22,13 +22,13 @@ function Main() {
 
   return (
 
-    <main>
+    <>
       <Promo/>
       <LandingNavigation/>
       <AboutProject/>
       <Techs/>
       <AboutMe/>
-    </main>
+    </>
   );
 }
 

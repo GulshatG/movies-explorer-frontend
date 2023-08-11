@@ -2,6 +2,7 @@
   padding: 70px 70px 10px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 270px);
+  justify-content: center;
   column-gap: 20px;
   row-gap: 38px;
   min-height: 460px;

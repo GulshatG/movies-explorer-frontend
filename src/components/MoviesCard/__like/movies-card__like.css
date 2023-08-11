@@ -1,3 +1,7 @@
 .movies-card__like {
-
+  width: 24px;
+  height: 24px;
+  border: none;
+  outline: none;
+  background: url("../../../images/like.svg");
 }

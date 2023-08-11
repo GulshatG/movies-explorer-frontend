@@ -4,8 +4,8 @@ function Search() {
   return (
     <form className="search__form">
       <div className="search__input-group">
-        <input className="search__input" placeholder="Фильм"/>
-        <button className="search__submit" type="submit"/>
+        <input className="search__input" placeholder="Фильм" required/>
+        <button className="search__submit animate-opacity" type="submit"/>
       </div>
       <div className="search__switch-group">
         <label className="search__switch">

@@ -1,7 +1,7 @@
 function Techs() {
   return (
     <section className="techs" id="techs">
-      <p className="title techs__title">Технологии</p>
+      <h2 className="title techs__title">Технологии</h2>
       <div className="techs__content">
         <p className="techs__second-title">7 технологий</p>
         <p className="techs__description">На курсе веб-разработки мы освоили технологии, которые

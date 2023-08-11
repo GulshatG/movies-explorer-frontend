@@ -5,8 +5,8 @@ function Promo() {
     <section className="promo">
       <img src={landingLogo} alt="Practicum logo"
            className="promo__image"/>
-      <p className="promo__text">Учебный проект студента факультета
-        Веб-разработки.</p>
+      <h1 className="promo__text">Учебный проект студента факультета
+        Веб-разработки.</h1>
     </section>
   );
 }

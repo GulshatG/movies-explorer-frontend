@@ -41,60 +41,62 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className={`app ${isSetHigh && 'app__fix-height'}`}>
-        <BurgerPopup
-          isOpen={isBurgerPopup}
-          onClose={handleHamburgerButtonClicked}
-        />
         <Header
           onHamburgerButtonClick={handleHamburgerButtonClicked}
           isShowNavigationLinks={isShowNavigationLinks}
           isShowAccountButton={isShowAccountButton}
         />
-        <Routes>
-          <Route
-            path="/"
-            element=
-              {
-                <>
-                  <Main/>
-                </>
+        <main>
+          <Routes>
+            <Route
+              path="/"
+              element=
+                {
+                  <>
+                    <Main/>
+                  </>
+                }
+            />
+            <Route
+              path="/movies"
+              element={
+                <Movies
+                  movies={movies}
+                  isOpenPopup={isBurgerPopup}
+                  closePopup={handleHamburgerButtonClicked}
+                />
               }
-          />
-          <Route
-            path="/movies"
-            element={
-              <Movies
-                movies={movies}
-                isOpenPopup={isBurgerPopup}
-                closePopup={handleHamburgerButtonClicked}
-              />
-            }
-          />
-          <Route
-            path="/saved-movies"
-            element={
-              <Movies
-                movies={savedMovies}
-                isOpenPopup={isBurgerPopup}
-                closePopup={handleHamburgerButtonClicked}
-              />
-            }
-          />
-          <Route
-            path="/profile"
-            element={<Profile/>}
-          />
-          <Route
-            path="/signup"
-            element={<Register/>}
-          />
-          <Route
-            path="/signin"
-            element={<Login/>}
-          />
-          <Route path="*" element={<NotFoundPage/>}/>
-        </Routes>
+            />
+            <Route
+              path="/saved-movies"
+              element={
+                <Movies
+                  movies={savedMovies}
+                  isOpenPopup={isBurgerPopup}
+                  closePopup={handleHamburgerButtonClicked}
+                />
+              }
+            />
+            <Route
+              path="/profile"
+              element={<Profile/>}
+            />
+            <Route
+              path="/signup"
+              element={<Register/>}
+            />
+            <Route
+              path="/signin"
+              element={<Login/>}
+            />
+            <Route path="*" element={<NotFoundPage/>}/>
+          </Routes>
+        </main>
         <Footer/>
+        <BurgerPopup
+          isOpen={isBurgerPopup}
+          onClose={handleHamburgerButtonClicked}
+        />
       </div>
     </CurrentUserContext.Provider>
   );

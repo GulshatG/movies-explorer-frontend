@@ -1,5 +1,4 @@
 import React from 'react';
-import like from '../../images/like.svg';
 
 function MoviesCard({ movie }) {
   return (
@@ -7,7 +6,7 @@ function MoviesCard({ movie }) {
       <img className="movies-card__image" src={movie.image.url} alt="movie image"/>
       <div className="movie-card__name-group">
         <p className="movies-card__name">{movie.nameRU}</p>
-        <img className="movies-card__like" src={like} alt="like icon"/>
+        <button className="movies-card__like"/>
       </div>
       <p className="movies-card__duration">
         {

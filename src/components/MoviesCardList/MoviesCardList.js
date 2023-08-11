@@ -34,7 +34,7 @@ function MoviesCardList({ movies }) {
   }
 
   return (
-    <section>
+    <>
       <div className="movies-card-list">
         {
           movies.slice(0, cardLength)
@@ -46,7 +46,7 @@ function MoviesCardList({ movies }) {
       {
         cardLength < movies.length && <Load/>
       }
-    </section>
+    </>
   );
 
 }
