@@ -1,8 +1,8 @@
 import React from 'react';
 
-function HelloTitle({ text }) {
+function HelloTitle({text}) {
   return (
-    <h2 className="hello-title">{text}</h2>
+      <h2 className="hello-title">{text}</h2>
   );
 }
 

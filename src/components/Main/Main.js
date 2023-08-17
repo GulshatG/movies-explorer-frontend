@@ -10,25 +10,25 @@ function Main() {
     let header = document.querySelector('.header');
     if (header && header.classList.contains('header_black')) {
       header.classList.remove(
-        'header_black');
+          'header_black');
     }
     return () => {
       if (header && !header.classList.contains('header_black')) {
         header.classList.add(
-          'header_black');
+            'header_black');
       }
     };
   });
 
   return (
 
-    <>
-      <Promo/>
-      <LandingNavigation/>
-      <AboutProject/>
-      <Techs/>
-      <AboutMe/>
-    </>
+      <>
+        <Promo/>
+        <LandingNavigation/>
+        <AboutProject/>
+        <Techs/>
+        <AboutMe/>
+      </>
   );
 }
 

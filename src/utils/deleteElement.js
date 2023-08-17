@@ -1,11 +1,11 @@
 function hideHeader() {
   const header = document.querySelector('.header');
-  if(header) header.classList.add('header__hide');
+  if (header) header.classList.add('header__hide');
 }
 
 function showHeader() {
   const header = document.querySelector('.header');
-  if(header) header.classList.remove('header__hide');
+  if (header) header.classList.remove('header__hide');
 }
 
 function hideFooter() {
@@ -18,4 +18,4 @@ function showFooter() {
   if (footer) footer.classList.remove('footer__hide');
 }
 
-export { hideHeader, hideFooter, showHeader, showFooter};
+export {hideHeader, hideFooter, showHeader, showFooter};

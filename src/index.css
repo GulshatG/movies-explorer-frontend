@@ -72,6 +72,7 @@
 @import url("./components/BurgerPopup/__container/burger-popup__container.css");
 @import url("./components/BurgerPopup/__close-icon/burger-popup__close-icon.css");
 @import url("./components/Movies/movies.css");
+@import url("./components/Movies/__container/movies-container.css");
 @import url("./components/Search/search.css");
 @import url("./components/Search/__form/search__form.css");
 @import url("./components/Search/__input/search__input.css");
@@ -88,7 +89,10 @@
 @import url("./components/MoviesCard/__name-group/movie-card__name-group.css");
 @import url("./components/MoviesCard/__name/movies-card__name.css");
 @import url("./components/MoviesCard/__like/movies-card__like.css");
+@import url("./components/MoviesCard/__like/_active/movies-card__like_active.css");
 @import url("./components/MoviesCard/__duration/movies-card__duration.css");
+@import url("./components/MoviesInformationText/movies-information-text.css");
+@import url("./components/MoviesInformationText/__text/movies-information-text__text.css");
 @import url("./components/Load/load.css");
 @import url("./components/Load/__button/load__button.css");
 @import url("./components/Hello-title/hello-title.css");
@@ -121,4 +125,11 @@
 @import url("./components/NotFoundPage/__description/not-found-page__description.css");
 @import url("./components/NotFoundPage/__link/not-found-page__link.css");
 @import url("./components/AnimateOpacity/animate-opacity.css");
+@import url("./components/Preload/preload.css");
+@import url("./components/Spinner/spinner.css");
+@import url("./components/InfoPopup/info-popup.css");
+@import url("./components/InfoPopup/__opened/info-popup__opened.css");
+@import url("./components/InfoPopup/__container/info-popup__container.css");
+@import url("./components/InfoPopup/__title/info-popup__title.css");
+@import url("./components/InfoPopup/__button/info-popup__button.css");
 

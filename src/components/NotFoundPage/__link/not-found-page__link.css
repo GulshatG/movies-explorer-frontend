@@ -1,17 +1,17 @@
 .not-found-page__link {
-  text-decoration: none;
-  outline: none;
-  color: #4285F4;
-  text-align: center;
-  font-family: Inter, serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+    text-decoration: none;
+    outline: none;
+    color: #4285F4;
+    text-align: center;
+    font-family: Inter, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 @media screen and (max-width: 425px) {
-  .not-found-page__link {
-    font-size: 12px;
-  }
+    .not-found-page__link {
+        font-size: 12px;
+    }
 }
