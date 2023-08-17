@@ -1,5 +1,5 @@
 import Api from './Api';
-import {serverMod} from './ServerConfig';
+import {localhostUrl, serverMod, serverUrl} from './ServerConfig';
 
 class MainApi extends Api {
   constructor(url) {
@@ -109,5 +109,5 @@ class MainApi extends Api {
 }
 
 const mainApi = new MainApi(
-    serverMod === 'dev' ? 'http://localhost:3000' : 'http://51.250.70.12');
+    serverMod === 'dev' ? localhostUrl : serverUrl);
 export default mainApi;
