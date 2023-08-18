@@ -7,17 +7,16 @@ import {Route, Routes, useLocation, useNavigate} from 'react-router-dom';
 import Movies from '../Movies/Movies';
 import Header from '../Header/Header';
 import Profile from '../Profile/Profile';
-import Register from '../Register/Register';
-import Login from '../Login/Login';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import MainApi from '../../utils/MainApi';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import InfoPopup from '../InfoPopup/InfoPopup';
 import {
   FAIL_LOGIN,
-  FAIL_REGISTER,
+  FAIL_REGISTER, SUCCESS_PROFILE_UPDATE,
   SUCCESS_REGISTER,
 } from '../../utils/Messages';
+import Auth from '../Auth/Auth';
 
 function App() {
   const navigate = useNavigate();
@@ -62,6 +61,8 @@ function App() {
   function handleUpdateProfile(name, email) {
     MainApi.update(name, email).then((res) => {
       setCurrentUser({...res.data});
+      setInfoText(SUCCESS_PROFILE_UPDATE);
+      setIsInfoPopupOpen(true);
     });
   }
 
@@ -137,11 +138,11 @@ function App() {
               />
               <Route
                   path="/signup"
-                  element={<Register onSubmit={handleSignUpSubmit}/>}
+                  element={<Auth isRegister={true} onSubmit={handleSignUpSubmit}/>}
               />
               <Route
                   path="/signin"
-                  element={<Login onSubmit={handleSignInSubmit}/>}
+                  element={<Auth isRegister={false} onSubmit={handleSignInSubmit}/>}
               />
               <Route
                   path="/movies"

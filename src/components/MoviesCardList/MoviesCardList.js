@@ -51,7 +51,8 @@ function MoviesCardList({
           {showSavedMovies ? (
               (movies.length !== 0 && movies[0].movieId) &&
               movies.map((m, i) => (
-                  <MoviesCard key={i} onLikeClicked={onLikeClicked} movie={m}/>
+                  <MoviesCard key={i} showSavedMovies={showSavedMovies}
+                              onLikeClicked={onLikeClicked} movie={m}/>
               ))
           ) : (
               (movies.length !== 0 && movies[0].movieId) &&

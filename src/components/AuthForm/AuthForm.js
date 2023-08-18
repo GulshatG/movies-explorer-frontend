@@ -10,8 +10,10 @@ function AuthForm({
   questionText,
   link,
   linkText,
+  disableButton,
   onSubmit,
 }) {
+
   return (
       <div className="auth-form">
         <Link to="/">
@@ -21,7 +23,10 @@ function AuthForm({
         <form className="auth-form__form" onSubmit={onSubmit}>
           {children}
           <div className="auth-form__button-group">
-            <button className="auth-form__button animate-opacity"
+
+            <button disabled={disableButton}
+                    className={`auth-form__button ${!disableButton &&
+                    'animate-opacity'}`}
                     type="submit">{buttonText}</button>
             <div className="auth-form__question-group">
               <p className="auth-form__question">{questionText}</p>

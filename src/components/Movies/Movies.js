@@ -87,7 +87,7 @@ function Movies({
           return m;
         });
         setMovies(moviesArrayWithIdFromDb);
-      }).catch((e) => {
+      }).catch(() => {
         console.log('err save');
         //убираем лайк
         setMovies([...movies]);
@@ -108,7 +108,7 @@ function Movies({
                 return m;
               }));
             }
-          }).catch((e) => {
+          }).catch(() => {
         console.log('can not delete saved movie');
         setMovies([...movies]);
       });
@@ -128,6 +128,10 @@ function Movies({
         });
   }
 
+  function handleCheckBoxClicked(movieName, isShortFilm) {
+    if (movies.length !== 0) handleSearchSubmit(movieName, isShortFilm);
+  }
+
   function handleSearchSubmit(movieName, isShortFilm) {
     setShowPreload(true);
     if (!showSavedMovies) {
@@ -139,7 +143,8 @@ function Movies({
 
   return (
       <div className="movies">
-        <Search searchText={searchText} isShortMovies={isShortMovies}
+        <Search onCheckBoxClicked={handleCheckBoxClicked}
+                searchText={searchText} isShortMovies={isShortMovies}
                 onSubmit={handleSearchSubmit}/>
         <div className="movies-container">
           {

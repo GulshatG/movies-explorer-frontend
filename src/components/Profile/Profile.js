@@ -2,14 +2,23 @@ import React from 'react';
 import {CurrentUserContext} from '../../context/CurrentUserContext';
 import HelloTitle from '../Hello-title/Hello-title';
 import {hideFooter, showFooter} from '../../utils/deleteElement';
+import {useInput} from '../../utils/FormValidation';
 
 function Profile({
   onUpdate,
   onSignOut,
 }) {
-  const [name, setName] = React.useState('');
-  const [email, setEmail] = React.useState('');
+
   const currentUser = React.useContext(CurrentUserContext);
+  const name = useInput(currentUser.name, {
+    minLength: 2,
+    isEmpty: false,
+  });
+  const email = useInput(currentUser.email, {
+    minLength: 5,
+    isEmpty: false,
+    isEmail: true,
+  });
   React.useEffect(() => {
     hideFooter();
     return () => {
@@ -17,23 +26,16 @@ function Profile({
     };
   }, []);
 
-  function handleNameChange(e) {
-    setName(e.target.value);
-  }
-
-  function handleEmailChange(e) {
-    setEmail(e.target.value);
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
-    onUpdate(name, email);
+    onUpdate(name.value, email.value);
   }
 
-  React.useEffect(() => {
-    setName(currentUser.name);
-    setEmail(currentUser.email);
-  }, [currentUser]);
+
+  function isDisableButton() {
+    return email.value === currentUser.email && name.value ===
+        currentUser.name;
+  }
 
   return (
       <section className="profile">
@@ -43,9 +45,9 @@ function Profile({
             <p className="profile__input-info">Имя</p>
             <input
                 id="name-input"
-                value={name || ''}
+                value={name.value || ''}
                 className="profile__input-value"
-                onChange={handleNameChange}
+                onChange={name.onChange}
                 type="text"
                 name="name"
                 placeholder="Имя"
@@ -58,9 +60,9 @@ function Profile({
             <p className="profile__input-info">E-mail</p>
             <input
                 id="email-input"
-                value={email || ''}
+                value={email.value || ''}
                 className="profile__input-value"
-                onChange={handleEmailChange}
+                onChange={email.onChange}
                 type="text"
                 name="email"
                 placeholder="Email"
@@ -69,7 +71,9 @@ function Profile({
                 maxLength="40"
             />
           </div>
-          <button className="profile__edite animate-opacity"
+          <button disabled={isDisableButton()}
+                  className={`profile__edite ${!isDisableButton() &&
+                  'animate-opacity'}`}
                   type="submit">Редактировать
           </button>
         </form>

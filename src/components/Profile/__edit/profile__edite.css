@@ -1,5 +1,5 @@
 .profile__edite {
-    padding: 220px 0 0;
+    margin: 220px 0 0;
     background-color: transparent;
     border: none;
     outline: none;
@@ -12,15 +12,19 @@
     line-height: normal;
 }
 
+.profile__edite:disabled {
+    color: gray;
+}
+
 @media screen and (max-width: 768px) {
     .profile__edite {
-        padding: 210px 0 0;
+        margin: 210px 0 0;
     }
 }
 
 @media screen and (max-width: 320px) {
     .profile__edite {
         font-size: 12px;
-        padding: 379px 0 0;
+        margin: 379px 0 0;
     }
 }

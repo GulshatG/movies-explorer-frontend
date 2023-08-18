@@ -81,8 +81,10 @@
 @import url("./components/Search/__switch/search__switch.css");
 @import url("./components/Search/__switch-group/search__switch-group.css");
 @import url("./components/Search/__switch-text/search__switch-text.css");
+@import url("./components/Search/__error-group/search__error-group.css");
 @import url("./components/Search/__input-group/search__input-group.css");
 @import url("./components/Search/__submit/search__submit.css");
+@import url("./components/Search/__error/search__error.css");
 @import url("./components/MoviesCardList/movies-card-list.css");
 @import url("./components/MoviesCard/movies-card.css");
 @import url("./components/MoviesCard/__image/movies-card__image.css");
@@ -90,6 +92,7 @@
 @import url("./components/MoviesCard/__name/movies-card__name.css");
 @import url("./components/MoviesCard/__like/movies-card__like.css");
 @import url("./components/MoviesCard/__like/_active/movies-card__like_active.css");
+@import url("./components/MoviesCard/__like/_delete/movies-card__like_delete.css");
 @import url("./components/MoviesCard/__duration/movies-card__duration.css");
 @import url("./components/MoviesInformationText/movies-information-text.css");
 @import url("./components/MoviesInformationText/__text/movies-information-text__text.css");
