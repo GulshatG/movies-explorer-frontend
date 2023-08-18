@@ -27,7 +27,7 @@ function Movies({
     return () => {
       if (isOpenPopup) closePopup();
     };
-  }, [isOpenPopup]);
+  });
   React.useEffect(() => {
 
     if (!showSavedMovies) {

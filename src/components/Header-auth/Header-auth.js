@@ -14,7 +14,7 @@ function HeaderAuth({
   return (
       <>
         <MoviesNavigation
-            isShowNavigationLinks={isShowNavigationLinks}
+            isShowNavigationLinks={isShowNavigationLinks} onHamburgerButtonClick={onHamburgerButtonClick}
         />
         <button onClick={() => navigate('/profile')}
                 className={`header-auth__account-button animate-opacity ${isShowAccountButton &&
