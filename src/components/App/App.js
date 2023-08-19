@@ -13,8 +13,8 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import InfoPopup from '../InfoPopup/InfoPopup';
 import {
   FAIL_LOGIN,
-  FAIL_REGISTER, SUCCESS_PROFILE_UPDATE,
-  SUCCESS_REGISTER,
+  FAIL_REGISTER,
+  SUCCESS_PROFILE_UPDATE,
 } from '../../utils/Messages';
 import Auth from '../Auth/Auth';
 
@@ -38,9 +38,9 @@ function App() {
       setIsLoggedIn(true);
       if (rout !== '/') {
         if (rout === '/signin' || rout === '/signup') {
-          navigate('/movies');
+          navigate('/movies', {replace: true});
         } else {
-          navigate(rout);
+          navigate(rout, {replace: true});
         }
       }
     }).catch(() => console.log('unauth'));
@@ -78,14 +78,13 @@ function App() {
       name,
       email,
       password,
-    }).then(() => {
-      setInfoText(SUCCESS_REGISTER);
-      navigate('/signin');
+    }).then((res) => {
+      setIsLoggedIn(true);
+      setCurrentUser({...res.data});
+      navigate('/movies');
     }).catch((e) => {
       console.log(e);
       setInfoText(FAIL_REGISTER);
-    }).finally(() => {
-      console.log('fin');
       setIsInfoPopupOpen(true);
     });
   }
@@ -106,7 +105,7 @@ function App() {
       password,
     }).then((res) => {
       setIsLoggedIn(true);
-      setCurrentUser({...res.data});
+      setCurrentUser({...res});
       navigate('/movies');
     }).catch((e) => {
       console.log('err ' + e);
@@ -138,12 +137,15 @@ function App() {
               />
               <Route
                   path="/signup"
-                  element={<Auth isRegister={true} onSubmit={handleSignUpSubmit}/>}
+                  element={<Auth isRegister={true}
+                                 onSubmit={handleSignUpSubmit}/>}
               />
               <Route
                   path="/signin"
-                  element={<Auth isRegister={false} onSubmit={handleSignInSubmit}/>}
+                  element={<Auth isRegister={false}
+                                 onSubmit={handleSignInSubmit}/>}
               />
+
               <Route
                   path="/movies"
                   element={

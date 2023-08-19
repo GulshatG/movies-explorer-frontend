@@ -30,12 +30,12 @@ function MoviesCardList({
   });
 
   function loadClicked() {
-    setCardLength(cardLength + getCardLength(window.innerWidth));
+    setCardLength(cardLength + (window.innerWidth <= 768 ? 2 : 4));
   }
 
   function getCardLength(width) {
     let cardLength;
-    if (width <= 320) {
+    if (width <= 480) {
       cardLength = 5;
     } else if (width <= 768) {
       cardLength = 8;
@@ -50,15 +50,15 @@ function MoviesCardList({
         <div className="movies-card-list">
           {showSavedMovies ? (
               (movies.length !== 0 && movies[0].movieId) &&
-              movies.map((m, i) => (
-                  <MoviesCard key={i} showSavedMovies={showSavedMovies}
+              movies.map((m) => (
+                  <MoviesCard key={m.movieId} showSavedMovies={showSavedMovies}
                               onLikeClicked={onLikeClicked} movie={m}/>
               ))
           ) : (
               (movies.length !== 0 && movies[0].movieId) &&
-              movies.slice(0, cardLength).map((m, i) => (
+              movies.slice(0, cardLength).map((m) => (
 
-                  <MoviesCard key={i} onLikeClicked={onLikeClicked} movie={m}/>
+                  <MoviesCard key={m.movieId} onLikeClicked={onLikeClicked} movie={m}/>
               ))
           )}
 

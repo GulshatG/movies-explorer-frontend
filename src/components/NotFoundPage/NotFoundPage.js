@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import {
   hideFooter,
   hideHeader,
@@ -8,6 +8,7 @@ import {
 } from '../../utils/deleteElement';
 
 function NotFoundPage() {
+  const navigate = useNavigate();
   React.useEffect(() => {
     hideHeader();
     hideFooter();
@@ -16,6 +17,11 @@ function NotFoundPage() {
       showFooter();
     };
   }, []);
+
+  function goBack() {
+    navigate(-1);
+  }
+
   return (
       <div className="not-found-page">
         <div className="not-found-page__container">
@@ -23,8 +29,10 @@ function NotFoundPage() {
             <p className="not-found-page__code">404</p>
             <p className="not-found-page__description">Страница не найдена</p>
           </div>
-          <Link className="not-found-page__link animate-opacity"
-                to="/">Назад</Link>
+          <button onClick={goBack}
+                  className="not-found-page__link animate-opacity">
+            Назад
+          </button>
         </div>
       </div>
   );

@@ -35,12 +35,14 @@ const useValidation = (value, validations) => {
           value ? setIsEmpty(false) : setIsEmpty(true);
           break;
         case 'minLength' :
-          value.length < validations[validation]
+          (value && value.length) < validations[validation]
               ? setIsLengthError(true)
               : setIsLengthError(false);
           break;
         case 'isEmail':
-          emailReg.test(value) ? setIsEmailError(false) : setIsEmailError(true);
+          (value && emailReg.test(value))
+              ? setIsEmailError(false)
+              : setIsEmailError(true);
       }
     }
   }, [value]);
