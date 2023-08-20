@@ -30,15 +30,26 @@ function MoviesCardList({
   });
 
   function loadClicked() {
-    setCardLength(cardLength + (window.innerWidth <= 768 ? 2 : 4));
+    let count;
+    let w = window.innerWidth;
+    if (w <= 989) {
+      count = 2;
+    } else if (w <= 1279) {
+      count = 3;
+    } else {
+      count = 4;
+    }
+    setCardLength(cardLength + count);
   }
 
   function getCardLength(width) {
     let cardLength;
-    if (width <= 480) {
+    if (width <= 767) {
       cardLength = 5;
-    } else if (width <= 768) {
+    } else if (width <= 989) {
       cardLength = 8;
+    } else if (width <= 1279) {
+      cardLength = 12;
     } else {
       cardLength = 16;
     }
@@ -58,7 +69,8 @@ function MoviesCardList({
               (movies.length !== 0 && movies[0].movieId) &&
               movies.slice(0, cardLength).map((m) => (
 
-                  <MoviesCard key={m.movieId} onLikeClicked={onLikeClicked} movie={m}/>
+                  <MoviesCard key={m.movieId} onLikeClicked={onLikeClicked}
+                              movie={m}/>
               ))
           )}
 
