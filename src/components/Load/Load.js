@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Load() {
+function Load({onClick}) {
   return (
-    <div className="load">
-      <button className="load__button animate-opacity">
-        Ещё
-      </button>
-    </div>
+      <div className="load">
+        <button className="load__button animate-opacity" onClick={onClick}>
+          Ещё
+        </button>
+      </div>
   );
 }
 

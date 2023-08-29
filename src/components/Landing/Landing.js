@@ -7,13 +7,13 @@ import AboutMe from '../AboutMe/AboutMe';
 
 function Landing(props) {
   return (
-    <>
-      <Promo/>
-      <LandingNavigation/>
-      <AboutProject/>
-      <Techs/>
-      <AboutMe/>
-    </>
+      <>
+        <Promo/>
+        <LandingNavigation/>
+        <AboutProject/>
+        <Techs/>
+        <AboutMe/>
+      </>
   );
 }
 
