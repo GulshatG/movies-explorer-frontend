@@ -54,23 +54,37 @@ function Movies({
   }, [showSavedMovies]);
 
   function getAndFilterMovies(movieName, isShortFilm) {
+    if (localStorage.getItem('allMovies')) {
+      const m = JSON.parse(localStorage.getItem('allMovies'));
+      mainApi.getSavedMovies().then((sv) => {
+        _filterMovies(movieName, isShortFilm, m, sv);
+      }).catch((e) => {
+        console.log(e);
+        setIsError(true);
+      });
+    }
     Promise.all([movieApi.getCards(), mainApi.getSavedMovies()]).
         then(([m, sv]) => {
-          let filteredMovies = filterMovies(movieName, isShortFilm, [...m],
-              [...sv.data]);
-          filteredMovies.length === 0 ? setIsNotFound(true) : setIsNotFound(
-              false);
-          setShowPreload(false);
-          setIsError(false);
-          localStorage.setItem('searchTex', movieName);
-          localStorage.setItem('isShortMovies', isShortFilm);
-          localStorage.setItem('movies', JSON.stringify(filteredMovies));
-          setMovies(filteredMovies);
+          localStorage.setItem('allMovies', JSON.stringify(m));
+          _filterMovies(movieName, isShortFilm, m, sv);
         }).
         catch((e) => {
           console.log(e);
           setIsError(true);
         });
+  }
+
+  function _filterMovies(movieName, isShortFilm, m, sv) {
+    let filteredMovies = filterMovies(movieName, isShortFilm, [...m],
+        [...sv.data]);
+    filteredMovies.length === 0 ? setIsNotFound(true) : setIsNotFound(
+        false);
+    setShowPreload(false);
+    setIsError(false);
+    localStorage.setItem('searchTex', movieName);
+    localStorage.setItem('isShortMovies', isShortFilm);
+    localStorage.setItem('movies', JSON.stringify(filteredMovies));
+    setMovies(filteredMovies);
   }
 
   function handleLikeClicked(movie) {

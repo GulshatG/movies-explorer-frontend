@@ -48,6 +48,7 @@ function _addLikesToAllMovies(movies) {
 
 function _filterByNameAndSort(text, isShort, movies) {
   return movies.filter((m) => {
+
     if (!m['nameRU'].toLowerCase().includes(text.toLowerCase()) &&
         !m['nameEN'].toLowerCase().includes(text.toLowerCase())) {
       return false;
